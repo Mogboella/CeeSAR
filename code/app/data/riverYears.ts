@@ -1,14 +1,13 @@
 export interface RiverYearData {
     year: number;
-    floodExtentKm2: number; // approximate flooded surface area
-    avgWaterLevelM: number; // average water level (meters)
-    peakWaterLevelM: number; // peak water level
-    rainfallAnomalyPct: number; // relative to baseline
-    image: string; // placeholder path or remote URL
+    floodExtentKm2: number;
+    avgWaterLevelM: number;
+    peakWaterLevelM: number;
+    rainfallAnomalyPct: number;
+    image: string;
     summary: string;
 }
 
-// Placeholder synthetic dataset; replace metrics with real processed outputs.
 export const RIVER_YEARS: RiverYearData[] = [
     {
         year: 2015,
@@ -16,7 +15,11 @@ export const RIVER_YEARS: RiverYearData[] = [
         avgWaterLevelM: 2.4,
         peakWaterLevelM: 4.0,
         rainfallAnomalyPct: 20,
+<<<<<<< Updated upstream
         image: "maps/2015_lowres.png",
+=======
+        image: "/public/maps/2015_lowres.png",
+>>>>>>> Stashed changes
         summary: "Severe flooding event; extensive farmland and infrastructure impacts.",
     },
     {
@@ -25,7 +28,7 @@ export const RIVER_YEARS: RiverYearData[] = [
         avgWaterLevelM: 2.1,
         peakWaterLevelM: 3.4,
         rainfallAnomalyPct: 8,
-        image: "/images/river/2016.jpg",
+        image: "/public/maps/2016_lowres.png",
         summary: "Mild winter flooding; localized farmland impacts near Shannon Callows.",
     },
     {

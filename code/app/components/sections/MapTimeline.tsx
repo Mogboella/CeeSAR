@@ -45,12 +45,20 @@ export function MapTimeline({ autoAdvanceMs = 3500, pauseOnHover = true }: MapTi
                     <div className="relative flex-1 min-h-[300px] flex items-center justify-center bg-black/5 dark:bg-black/40">
                         <div className="absolute inset-0 flex items-center justify-center">
                             <div className="h-full w-full flex items-center justify-center p-4">
+<<<<<<< Updated upstream
                                 <div className="w-full h-full rounded-lg overflow-hidden shadow-lg bg-gray-200 dark:bg-gray-800">
                                     {/* Placeholder; replace with <img /> or map canvas */}
                                     <img
                                         src={years[index].image}
                                         alt={`Flood extent map for year ${years[index].year}`}
                                         className="object-cover w-full h-full rounded-lg"
+=======
+                                <div className="w-full h-full rounded-lg shadow-lg ">
+                                    <img
+                                        className="w-full h-full object-cover"
+                                        src={years[index].image}
+                                        alt={`Flood extent map for year ${years[index].year}`}
+>>>>>>> Stashed changes
                                     />
                                 </div>
                             </div>
@@ -86,6 +94,19 @@ export function MapTimeline({ autoAdvanceMs = 3500, pauseOnHover = true }: MapTi
                     Data illustrative; integrate SAR composite tiles or dynamic map for production.
                 </p>
             </div>
+            <div className="mt-25 flex flex-col sm:flex-row gap-4 justify-center">
+                    <span className="flex justify-center w-full">
+                        <svg
+                            className="animate-bounce h-16 w-16 text-sky-600 dark:text-sky-300"
+                            fill="none"
+                            stroke="currentColor"
+                            strokeWidth={2}
+                            viewBox="0 0 24 24"
+                        >
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </span>
+                </div>
         </section>
     );
 }
