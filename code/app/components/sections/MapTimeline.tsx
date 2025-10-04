@@ -45,20 +45,11 @@ export function MapTimeline({ autoAdvanceMs = 3500, pauseOnHover = true }: MapTi
                     <div className="relative flex-1 min-h-[300px] flex items-center justify-center bg-black/5 dark:bg-black/40">
                         <div className="absolute inset-0 flex items-center justify-center">
                             <div className="h-full w-full flex items-center justify-center p-4">
-<<<<<<< Updated upstream
-                                <div className="w-full h-full rounded-lg overflow-hidden shadow-lg bg-gray-200 dark:bg-gray-800">
-                                    {/* Placeholder; replace with <img /> or map canvas */}
-                                    <img
-                                        src={years[index].image}
-                                        alt={`Flood extent map for year ${years[index].year}`}
-                                        className="object-cover w-full h-full rounded-lg"
-=======
                                 <div className="w-full h-full rounded-lg shadow-lg ">
                                     <img
                                         className="w-full h-full object-cover"
                                         src={years[index].image}
                                         alt={`Flood extent map for year ${years[index].year}`}
->>>>>>> Stashed changes
                                     />
                                 </div>
                             </div>
