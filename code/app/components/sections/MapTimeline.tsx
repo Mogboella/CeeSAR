@@ -12,7 +12,7 @@ export function MapTimeline({ autoAdvanceMs = 3500, pauseOnHover = true }: MapTi
     const years = RIVER_YEARS;
     const containerRef = useRef<HTMLDivElement | null>(null);
 
-    // Auto-advance
+    // AUTO-ADVANCE LOGIC
     useEffect(() => {
         if (isPaused) return;
         const id = setTimeout(() => {
@@ -75,15 +75,6 @@ export function MapTimeline({ autoAdvanceMs = 3500, pauseOnHover = true }: MapTi
                                     </button>
                                 );
                             })}
-                        </div>
-                        <div className="p-3 border-t border-gray-200 dark:border-gray-800 flex items-center justify-between text-xs text-gray-600 dark:text-gray-400">
-                            <span>{isPaused ? "Paused" : "Playing"}</span>
-                            <button
-                                onClick={() => setIsPaused((p) => !p)}
-                                className="px-2 py-1 rounded bg-sky-600 text-white hover:bg-sky-700"
-                            >
-                                {isPaused ? "Resume" : "Pause"}
-                            </button>
                         </div>
                     </div>
                 </div>
