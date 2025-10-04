@@ -1,8 +1,10 @@
 import type { Route } from "./+types/home";
+import { ProblemStatement } from "../components/sections/ProblemStatement";
 import { RiverHero } from "../components/sections/RiverHero";
 import { MapTimeline } from "../components/sections/MapTimeline";
 import { SARMethod } from "../components/sections/SARMethod";
 import { YearAutoInsight } from "../components/sections/YearAutoInsight";
+import { Footer } from "../components/sections/Footer";
 import { useScrollSpy } from "../hooks/useScrollSpy";
 import { useEffect, useState } from "react";
 
@@ -14,7 +16,8 @@ export function meta({ }: Route.MetaArgs) {
 }
 
 const SECTIONS = [
-  { id: "river-hero", label: "Home" },
+  { id: "river-hero", label: "Overview" },
+  { id: "problem", label: "Problem" },
   { id: "map-timeline", label: "Timeline" },
   { id: "sar-method", label: "Method" },
   { id: "year-insight", label: "Year View" },
@@ -69,10 +72,12 @@ export default function Home() {
       {/* Scroll Snap Container */}
       <div className="snap-y-container">
         <RiverHero />
+        <ProblemStatement />
         <MapTimeline />
         <SARMethod />
         <YearAutoInsight />
       </div>
+      <Footer />
     </div>
   );
 }
