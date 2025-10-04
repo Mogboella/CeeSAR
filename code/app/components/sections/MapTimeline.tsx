@@ -1,0 +1,104 @@
+import { useEffect, useRef, useState } from "react";
+import { RIVER_YEARS } from "../../data/riverYears";
+
+interface MapTimelineProps {
+    autoAdvanceMs?: number;
+    pauseOnHover?: boolean;
+}
+
+export function MapTimeline({ autoAdvanceMs = 3500, pauseOnHover = true }: MapTimelineProps) {
+    const [index, setIndex] = useState(0);
+    const [isPaused, setIsPaused] = useState(false);
+    const years = RIVER_YEARS;
+    const containerRef = useRef<HTMLDivElement | null>(null);
+
+    // Auto-advance
+    useEffect(() => {
+        if (isPaused) return;
+        const id = setTimeout(() => {
+            setIndex((i) => (i + 1) % years.length);
+        }, autoAdvanceMs);
+        return () => clearTimeout(id);
+    }, [index, years.length, autoAdvanceMs, isPaused]);
+
+    return (
+        <section
+            id="map-timeline"
+            className="snap-section px-6 bg-white dark:bg-gray-950 flex flex-col"
+        >
+            <div className="max-w-6xl mx-auto w-full flex flex-col h-full">
+                <header className="mb-6 text-center">
+                    <h2 className="text-3xl md:text-4xl font-semibold tracking-tight mb-2">
+                        Decadal Flood Extent Timeline
+                    </h2>
+                    <p className="text-sm md:text-base text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+                        Scroll or watch the sequence: yearly SAR-derived flood composites along the Shannon.
+                    </p>
+                </header>
+                <div
+                    className="relative flex-1 flex flex-col md:flex-row gap-6 overflow-hidden rounded-xl border border-gray-200 dark:border-gray-800 bg-gradient-to-b from-gray-50 to-white dark:from-gray-900 dark:to-gray-950 shadow"
+                    ref={containerRef}
+                    onMouseEnter={() => pauseOnHover && setIsPaused(true)}
+                    onMouseLeave={() => pauseOnHover && setIsPaused(false)}
+                >
+                    {/* Image / map region */}
+                    <div className="relative flex-1 min-h-[300px] flex items-center justify-center bg-black/5 dark:bg-black/40">
+                        <div className="absolute inset-0 flex items-center justify-center">
+                            <div className="h-full w-full flex items-center justify-center p-4">
+                                <div className="w-full h-full rounded-lg bg-gray-300 dark:bg-gray-700 flex items-center justify-center text-gray-700 dark:text-gray-300 text-sm md:text-base">
+                                    {/* Placeholder; replace with <img /> or map canvas */}
+                                    Year {years[index].year} Map Placeholder
+                                </div>
+                            </div>
+                        </div>
+                        <YearBadge year={years[index].year} />
+                    </div>
+
+                    {/* Mini year scrub bar */}
+                    <div className="md:w-64 w-full md:border-l border-t md:border-t-0 border-gray-200 dark:border-gray-800 flex flex-col">
+                        <div className="flex-1 overflow-y-auto px-3 py-4 space-y-1 text-sm custom-scrollbar">
+                            {years.map((y, i) => {
+                                const active = i === index;
+                                return (
+                                    <button
+                                        key={y.year}
+                                        onClick={() => setIndex(i)}
+                                        className={`w-full text-left px-3 py-2 rounded-md transition flex items-center justify-between ${active
+                                                ? "bg-sky-600 text-white shadow"
+                                                : "hover:bg-gray-100 dark:hover:bg-gray-800 text-gray-700 dark:text-gray-300"
+                                            }`}
+                                    >
+                                        <span>{y.year}</span>
+                                        <span className="text-xs opacity-70">
+                                            {y.floodExtentKm2.toFixed(0)} km²
+                                        </span>
+                                    </button>
+                                );
+                            })}
+                        </div>
+                        <div className="p-3 border-t border-gray-200 dark:border-gray-800 flex items-center justify-between text-xs text-gray-600 dark:text-gray-400">
+                            <span>{isPaused ? "Paused" : "Playing"}</span>
+                            <button
+                                onClick={() => setIsPaused((p) => !p)}
+                                className="px-2 py-1 rounded bg-sky-600 text-white hover:bg-sky-700"
+                            >
+                                {isPaused ? "Resume" : "Pause"}
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <p className="mt-4 text-xs text-gray-500 dark:text-gray-500 text-center">
+                    Data illustrative; integrate SAR composite tiles or dynamic map for production.
+                </p>
+            </div>
+        </section>
+    );
+}
+
+function YearBadge({ year }: { year: number }) {
+    return (
+        <div className="absolute top-4 left-4 px-3 py-1 rounded-full bg-sky-700 text-white text-sm shadow">
+            {year}
+        </div>
+    );
+}

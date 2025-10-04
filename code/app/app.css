@@ -13,3 +13,30 @@ body {
     color-scheme: dark;
   }
 }
+
+/* Scroll Snap Landing Page Utilities */
+.snap-y-container {
+  scroll-snap-type: y mandatory;
+  overflow-y: auto;
+  height: 100dvh;
+}
+
+.snap-section {
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+@media (min-width: 768px) {
+  .snap-section.half {
+    min-height: 60dvh;
+  }
+}
+
+/* Smooth scroll behavior for anchor navigation */
+html {
+  scroll-behavior: smooth;
+}
