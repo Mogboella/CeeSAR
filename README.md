@@ -1,2 +1,2 @@
-# CeeSAR_UI
-UI for CeeSAR project
+# Cea-SAR_UI
+UI for Cea-SAR project

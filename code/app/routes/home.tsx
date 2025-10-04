@@ -41,7 +41,7 @@ export default function Home() {
       >
         <div className="mx-auto max-w-7xl px-4 flex items-center h-14 gap-8">
           <a href="#river-hero" className="font-semibold tracking-tight text-lg">
-            CeeSAR
+            Cea-SAR
           </a>
           <ul className="hidden md:flex items-center gap-6 text-sm font-medium">
             {SECTIONS.map((s) => (
