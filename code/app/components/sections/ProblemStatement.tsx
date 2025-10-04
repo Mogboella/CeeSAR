@@ -6,13 +6,19 @@ export function ProblemStatement() {
                     Problem Statement
                 </h2>
                 <p className="text-lg md:text-xl text-gray-700 dark:text-gray-200 mb-8">
-                    Flooding along the Shannon River in Ireland poses recurring risks to communities, infrastructure, and agriculture. Traditional monitoring methods struggle with cloud cover, rapid changes, and data latency. Our solution leverages Synthetic Aperture Radar (SAR) to deliver timely, high-resolution flood intelligence, enabling better prediction, response, and resilience planning.
+                    The River Shannon experiences recurrent winter flooding, intensified by heavy rainfall and prolonged saturation of surrounding lands.
+                    During severe events like the 2015–2016 floods, water levels expanded across counties such as Limerick, Galway, Mayo, Roscommon, and Offaly—impacting thousands of hectares.
+                    Conventional monitoring methods face limitations from persistent cloud cover and delayed ground reports, hindering timely flood assessment and response.
                 </p>
-                <ul className="text-left mx-auto max-w-2xl space-y-4 text-base text-gray-600 dark:text-gray-300">
-                    <li><strong>Challenge:</strong> Persistent flooding, limited visibility, slow ground reporting.</li>
-                    <li><strong>Goal:</strong> Provide actionable, year-round flood insights for the Shannon basin.</li>
-                    <li><strong>Approach:</strong> SAR-based mapping, multi-year analytics, and intuitive visualizations.</li>
-                </ul>
+                <p className="text-lg md:text-xl text-gray-700 dark:text-gray-200 mb-8">
+                    Leveraging Synthetic Aperture Radar (SAR) data allows consistent, high-resolution flood mapping and temporal analysis, regardless of weather or daylight conditions.
+                    This project aims to identify and track emerging flood hotspots along the Shannon River, supporting proactive risk management and resilience planning.
+                </p>
+                {/* <ul className="text-left mx-auto max-w-2xl space-y-4 text-base text-gray-600 dark:text-gray-300">
+                    <li><strong>Challenge:</strong> Persistent flooding, poor visibility, and lagging situational awareness.</li>
+                    <li><strong>Goal:</strong> Deliver real-time, year-round flood intelligence for the Shannon basin.</li>
+                    <li><strong>Approach:</strong> Multi-temporal SAR analysis, hotspot detection, and dynamic visualizations.</li>
+                </ul> */}
             </div>
         </section>
     );
