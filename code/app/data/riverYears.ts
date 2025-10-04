@@ -16,7 +16,7 @@ export const RIVER_YEARS: RiverYearData[] = [
         avgWaterLevelM: 2.4,
         peakWaterLevelM: 4.0,
         rainfallAnomalyPct: 20,
-        image: "/images/river/2015.jpg",
+        image: "maps/2015_lowres.png",
         summary: "Severe flooding event; extensive farmland and infrastructure impacts.",
     },
     {

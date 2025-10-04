@@ -45,9 +45,13 @@ export function MapTimeline({ autoAdvanceMs = 3500, pauseOnHover = true }: MapTi
                     <div className="relative flex-1 min-h-[300px] flex items-center justify-center bg-black/5 dark:bg-black/40">
                         <div className="absolute inset-0 flex items-center justify-center">
                             <div className="h-full w-full flex items-center justify-center p-4">
-                                <div className="w-full h-full rounded-lg bg-gray-300 dark:bg-gray-700 flex items-center justify-center text-gray-700 dark:text-gray-300 text-sm md:text-base">
+                                <div className="w-full h-full rounded-lg overflow-hidden shadow-lg bg-gray-200 dark:bg-gray-800">
                                     {/* Placeholder; replace with <img /> or map canvas */}
-                                    Year {years[index].year} Map Placeholder
+                                    <img
+                                        src={years[index].image}
+                                        alt={`Flood extent map for year ${years[index].year}`}
+                                        className="object-cover w-full h-full rounded-lg"
+                                    />
                                 </div>
                             </div>
                         </div>

@@ -14,12 +14,27 @@ export function ProblemStatement() {
                     Leveraging Synthetic Aperture Radar (SAR) data allows consistent, high-resolution flood mapping and temporal analysis, regardless of weather or daylight conditions.
                     This project aims to identify and track emerging flood hotspots along the Shannon River, supporting proactive risk management and resilience planning.
                 </p>
+                
                 {/* <ul className="text-left mx-auto max-w-2xl space-y-4 text-base text-gray-600 dark:text-gray-300">
                     <li><strong>Challenge:</strong> Persistent flooding, poor visibility, and lagging situational awareness.</li>
                     <li><strong>Goal:</strong> Deliver real-time, year-round flood intelligence for the Shannon basin.</li>
                     <li><strong>Approach:</strong> Multi-temporal SAR analysis, hotspot detection, and dynamic visualizations.</li>
                 </ul> */}
             </div>
+            {/* SCROLL DOWN ICON */}
+                <div className="mt-5 flex flex-col sm:flex-row gap-4 justify-center">
+                    <span className="flex justify-center w-full">
+                        <svg
+                            className="animate-bounce h-16 w-16 text-sky-600 dark:text-sky-300"
+                            fill="none"
+                            stroke="currentColor"
+                            strokeWidth={2}
+                            viewBox="0 0 24 24"
+                        >
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </span>
+                </div>
         </section>
     );
 }
