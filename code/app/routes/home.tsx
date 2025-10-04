@@ -49,8 +49,8 @@ export default function Home() {
                 <a
                   href={`#${s.id}`}
                   className={`px-1 py-1 border-b-2 -mb-px transition-colors ${activeId === s.id
-                      ? "border-blue-600 text-blue-600 dark:text-blue-400"
-                      : "border-transparent text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white"
+                    ? "border-blue-600 text-blue-600 dark:text-blue-400"
+                    : "border-transparent text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white"
                     }`}
                 >
                   {s.label}
