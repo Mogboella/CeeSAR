@@ -76,15 +76,6 @@ export function MapTimeline({ autoAdvanceMs = 3500, pauseOnHover = true }: MapTi
                                 );
                             })}
                         </div>
-                        <div className="p-3 border-t border-gray-200 dark:border-gray-800 flex items-center justify-between text-xs text-gray-600 dark:text-gray-400">
-                            <span>{isPaused ? "Paused" : "Playing"}</span>
-                            <button
-                                onClick={() => setIsPaused((p) => !p)}
-                                className="px-2 py-1 rounded bg-sky-600 text-white hover:bg-sky-700"
-                            >
-                                {isPaused ? "Resume" : "Pause"}
-                            </button>
-                        </div>
                     </div>
                 </div>
                 <p className="mt-4 text-xs text-gray-500 dark:text-gray-500 text-center">

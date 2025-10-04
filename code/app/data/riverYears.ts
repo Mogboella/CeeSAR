@@ -11,6 +11,15 @@ export interface RiverYearData {
 // Placeholder synthetic dataset; replace metrics with real processed outputs.
 export const RIVER_YEARS: RiverYearData[] = [
     {
+        year: 2015,
+        floodExtentKm2: 160.5,
+        avgWaterLevelM: 2.4,
+        peakWaterLevelM: 4.0,
+        rainfallAnomalyPct: 20,
+        image: "/images/river/2015.jpg",
+        summary: "Severe flooding event; extensive farmland and infrastructure impacts.",
+    },
+    {
         year: 2016,
         floodExtentKm2: 112.4,
         avgWaterLevelM: 2.1,
