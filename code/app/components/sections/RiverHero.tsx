@@ -10,12 +10,16 @@ export function RiverHero() {
                     hydrological shifts, and risk signals across Ireland's longest river.
                 </p>
                 <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="#problem" className="px-6 py-3 rounded-lg bg-sky-700 text-white font-medium shadow hover:bg-sky-800 transition">
+                        Problem Statement
+                    </a>
                     <a href="#map-timeline" className="px-6 py-3 rounded-lg bg-sky-700 text-white font-medium shadow hover:bg-sky-800 transition">
                         View Timeline
                     </a>
                     <a href="#sar-method" className="px-6 py-3 rounded-lg border border-sky-300 dark:border-sky-700 font-medium text-sky-800 dark:text-sky-200 hover:bg-sky-50 dark:hover:bg-sky-900/40 transition">
                         How It Works
                     </a>
+                    
                 </div>
             </div>
         </section>
