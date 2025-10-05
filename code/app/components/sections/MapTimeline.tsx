@@ -26,7 +26,7 @@ export function MapTimeline({ autoAdvanceMs = 3500, pauseOnHover = true }: MapTi
             id="map-timeline"
             className="snap-section px-6 bg-white dark:bg-gray-950 flex flex-col"
         >
-            <div className="max-w-6xl mx-auto w-full flex flex-col h-full">
+            <div className="max-w-6xl mx-auto w-full flex flex-col h-full pt-40">
                 <header className="mb-6 text-center">
                     <h2 className="text-3xl md:text-4xl font-semibold tracking-tight mb-2">
                         Decadal Flood Extent Timeline
@@ -46,11 +46,16 @@ export function MapTimeline({ autoAdvanceMs = 3500, pauseOnHover = true }: MapTi
                         <div className="absolute inset-0 flex items-center justify-center">
                             <div className="h-full w-full flex items-center justify-center p-4">
                                 <div className="w-full h-full rounded-lg shadow-lg ">
-                                    <img
-                                        className="w-full h-full object-cover"
-                                        src={years[index].image}
-                                        alt={`Flood extent map for year ${years[index].year}`}
-                                    />
+                                    <video
+                                        className="w-full h-full object-cover rounded-lg shadow-lg"
+                                        autoPlay
+                                        loop
+                                        muted
+                                        playsInline
+                                        >
+                                        <source src={years[index].link} type="video/mp4" />
+                                        Your browser does not support the video tag.
+                                    </video>
                                 </div>
                             </div>
                         </div>
@@ -85,7 +90,7 @@ export function MapTimeline({ autoAdvanceMs = 3500, pauseOnHover = true }: MapTi
                     Data illustrative; integrate SAR composite tiles or dynamic map for production.
                 </p>
             </div>
-            <div className="mt-25 flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
                     <span className="flex justify-center w-full">
                         <svg
                             className="animate-bounce h-16 w-16 text-sky-600 dark:text-sky-300"
