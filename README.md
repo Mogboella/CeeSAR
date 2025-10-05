@@ -2,7 +2,7 @@
 
 ### *The Shannon Pulse: Forecasting Floodplain Dynamics with SAR*
 
-[**Live Demo**](https://ceasarfloodcontrol.netlify.app) | [Presentation Slides](https://docs.google.com/presentation/d/1l0HDGeEu08QUAeONfVKyeDj_vpYYNS4s/edit?usp=sharing&ouid=107882326391173504607&rtpof=true&sd=true) | [GeoTiff Files](https://drive.google.com/drive/folders/19NzwQEv8kYul2HK9HE1QtGefbQUUrOMP?usp=sharing)
+[**Live Demo**](https://ceasarfloodcontrol.netlify.app) | [Presentation Slides](https://docs.google.com/presentation/d/1NwbN6U6DzFOftWiU_X7FwknPl070wbRE/edit?usp=drive_link&ouid=107882326391173504607&rtpof=true&sd=true) | [GeoTiff Data](https://drive.google.com/drive/folders/19NzwQEv8kYul2HK9HE1QtGefbQUUrOMP?usp=sharing)
 
 ![NASA Space Apps](https://img.shields.io/badge/NASA-Space%20Apps%202025-blue)
 ![Challenge](https://img.shields.io/badge/Challenge-Radar%20Looking%20Glass-orange)
@@ -100,7 +100,7 @@ This project meets the challenge objectives by:
 
 **Primary Data Sources:**
 
-* Sentinel-1 (ESA Copernicus Open Access Hub)
+* [Sentinel-1 (ESA Copernicus Open Access Hub)](https://drive.google.com/drive/folders/19NzwQEv8kYul2HK9HE1QtGefbQUUrOMP?usp=sharing) 
 
 **Workflow:**
 
@@ -109,6 +109,10 @@ This project meets the challenge objectives by:
 3. Conduct water extent & backscatter analysis
 4. Validate with OPW and flood reports
 5. Visualize outputs on interactive web maps
+
+**Google Earth Engine**
+- [source_code](https://code.earthengine.google.com/797a81334d55a81b51e481223bdb7b30)
+
 
 ---
 
@@ -158,7 +162,7 @@ This project meets the challenge objectives by:
 **License:** MIT
 
 * **Live Demo:** [ceasarfloodcontrol.netlify.app](https://ceasarfloodcontrol.netlify.app)
-* **Slides:** [Link to presentation](https://docs.google.com/presentation/d/1l0HDGeEu08QUAeONfVKyeDj_vpYYNS4s/edit?usp=sharing&ouid=107882326391173504607&rtpof=true&sd=true)
+* **Slides:** [Link to presentation](https://docs.google.com/presentation/d/1NwbN6U6DzFOftWiU_X7FwknPl070wbRE/edit?usp=drive_link&ouid=107882326391173504607&rtpof=true&sd=true)
 * **NASA Challenge:** [Through the Radar Looking Glass](https://www.spaceappschallenge.org/)
 
 ---
