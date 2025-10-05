@@ -12,7 +12,7 @@ export function MapTimeline({ autoAdvanceMs = 3500, pauseOnHover = true }: MapTi
     const years = RIVER_YEARS;
     const containerRef = useRef<HTMLDivElement | null>(null);
 
-    // Auto-advance
+    // ==== AUTO-ADVANCE LOGIC ====
     useEffect(() => {
         if (isPaused) return;
         const id = setTimeout(() => {
@@ -41,20 +41,19 @@ export function MapTimeline({ autoAdvanceMs = 3500, pauseOnHover = true }: MapTi
                     onMouseEnter={() => pauseOnHover && setIsPaused(true)}
                     onMouseLeave={() => pauseOnHover && setIsPaused(false)}
                 >
-                    {/* Image / map region */}
-                    <div className="relative flex-1 min-h-[300px] flex items-center justify-center bg-black/5 dark:bg-black/40">
+                    {/* ==== GALLERY ==== */}
+                    <div className="relative flex-1 min-h-[600px] flex items-center justify-center ">
                         <div className="absolute inset-0 flex items-center justify-center">
                             <div className="h-full w-full flex items-center justify-center p-4">
                                 <div className="w-full h-full rounded-lg shadow-lg ">
                                     <video
-                                        className="w-full h-full object-cover rounded-lg shadow-lg"
+                                        className="w-full h-full object-cover rounded-lg"
                                         autoPlay
                                         loop
                                         muted
                                         playsInline
                                         >
-                                        <source src={years[index].link} type="video/mp4" />
-                                        Your browser does not support the video tag.
+                                        <source src={years[index].image} type="video/mp4" />
                                     </video>
                                 </div>
                             </div>
