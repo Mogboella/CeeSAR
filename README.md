@@ -158,10 +158,10 @@ This project meets the challenge objectives by:
 **License:** MIT
 
 * **Live Demo:** [ceasarfloodcontrol.netlify.app](https://ceasarfloodcontrol.netlify.app)
-* **Slides:** [Link to presentation](Guys, please check if you can view the presentation here: https://docs.google.com/presentation/d/14d9Ots0QDqjlhvr0dT1BmZhV0mvd5bDI/edit?usp=drive_link&ouid=105400134222966212498&rtpof=true&sd=true)
+* **Slides:** [Link to presentation](https://docs.google.com/presentation/d/14d9Ots0QDqjlhvr0dT1BmZhV0mvd5bDI/edit?usp=drive_link&ouid=105400134222966212498&rtpof=true&sd=true)
 * **NASA Challenge:** [Through the Radar Looking Glass](https://www.spaceappschallenge.org/)
 
 ---
 
-*Developed during the 2025 NASA Space Apps Challenge — a 48-hour global hackathon. Some visualizations use representative data for demonstration purposes. For official flood alerts, refer to Met Éireann and the Irish Office of Public Works (OPW).*
+*Developed during the 2025 NASA Space Apps Challenge — a 48-hour global hackathon. Some visualizations use AI Generated representative data for demonstration purposes. For official flood alerts, refer to Met Éireann and the Irish Office of Public Works (OPW).*
 
