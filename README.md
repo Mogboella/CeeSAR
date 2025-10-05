@@ -163,5 +163,5 @@ This project meets the challenge objectives by:
 
 ---
 
-*Developed during the 2025 NASA Space Apps Challenge — a 48-hour global hackathon. Some visualizations use AI Generated representative data for demonstration purposes. For official flood alerts, refer to Met Éireann and the Irish Office of Public Works (OPW).*
+*Developed during the 2025 NASA Space Apps Challenge — a 48-hour global hackathon. AI was used for UI initialization/scaffolding and some visualizations use AI Generated representative data for demonstration purposes. For official flood alerts, refer to Met Éireann and the Irish Office of Public Works (OPW).*
 
