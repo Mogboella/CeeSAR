@@ -1,22 +1,30 @@
 export interface RiverYearData {
     year: number;
-    floodExtentKm2: number; // approximate flooded surface area
-    avgWaterLevelM: number; // average water level (meters)
-    peakWaterLevelM: number; // peak water level
-    rainfallAnomalyPct: number; // relative to baseline
-    image: string; // placeholder path or remote URL
+    floodExtentKm2: number;
+    avgWaterLevelM: number;
+    peakWaterLevelM: number;
+    rainfallAnomalyPct: number;
+    image: string;
     summary: string;
 }
 
-// Placeholder synthetic dataset; replace metrics with real processed outputs.
 export const RIVER_YEARS: RiverYearData[] = [
+    {
+        year: 2015,
+        floodExtentKm2: 160.5,
+        avgWaterLevelM: 2.4,
+        peakWaterLevelM: 4.0,
+        rainfallAnomalyPct: 20,
+        image: "https://res.cloudinary.com/dgdsc8fxf/video/upload/v1759613171/SAR_2015_dm0qjs.mp4",
+        summary: "Severe flooding event; extensive farmland and infrastructure impacts.",
+    },
     {
         year: 2016,
         floodExtentKm2: 112.4,
         avgWaterLevelM: 2.1,
         peakWaterLevelM: 3.4,
         rainfallAnomalyPct: 8,
-        image: "/images/river/2016.jpg",
+        image: "/public/maps/2016_lowres.png",
         summary: "Mild winter flooding; localized farmland impacts near Shannon Callows.",
     },
     {
@@ -57,47 +65,38 @@ export const RIVER_YEARS: RiverYearData[] = [
     },
     {
         year: 2021,
-        floodExtentKm2: 142.7,
-        avgWaterLevelM: 2.2,
-        peakWaterLevelM: 3.5,
-        rainfallAnomalyPct: 9,
-        image: "/images/river/2021.jpg",
-        summary: "Moderate seasonal inundation; riparian restoration zones effective.",
+        floodExtentKm2: 0,
+        avgWaterLevelM: 0,
+        peakWaterLevelM: 0,
+        rainfallAnomalyPct: 0,
+        image: "",
+        summary: "Data Coming Soon",
     },
     {
         year: 2022,
-        floodExtentKm2: 120.3,
-        avgWaterLevelM: 2.0,
-        peakWaterLevelM: 3.1,
-        rainfallAnomalyPct: -4,
-        image: "/images/river/2022.jpg",
-        summary: "Slightly below average extent; improved early warning accuracy.",
+        floodExtentKm2: 0,
+        avgWaterLevelM: 0,
+        peakWaterLevelM: 0,
+        rainfallAnomalyPct: 0,
+        image: "",
+        summary: "Data Coming Soon",
     },
     {
         year: 2023,
-        floodExtentKm2: 163.8,
-        avgWaterLevelM: 2.4,
-        peakWaterLevelM: 3.8,
-        rainfallAnomalyPct: 13,
-        image: "/images/river/2023.jpg",
-        summary: "Elevated late autumn discharge; higher turbidity in lower reaches.",
+        floodExtentKm2: 0,
+        avgWaterLevelM: 0,
+        peakWaterLevelM: 0,
+        rainfallAnomalyPct: 0,
+        image: "",
+        summary: "Data Coming Soon",
     },
     {
         year: 2024,
-        floodExtentKm2: 181.5,
-        avgWaterLevelM: 2.6,
-        peakWaterLevelM: 4.3,
-        rainfallAnomalyPct: 25,
-        image: "/images/river/2024.jpg",
-        summary: "Notable peak overtopping minor embankments; infrastructure stress tests triggered.",
-    },
-    {
-        year: 2025,
-        floodExtentKm2: 169.2,
-        avgWaterLevelM: 2.5,
-        peakWaterLevelM: 4.0,
-        rainfallAnomalyPct: 18,
-        image: "/images/river/2025.jpg",
-        summary: "Sustained high stages; model recalibration improved inundation mapping latency.",
-    },
+        floodExtentKm2: 0,
+        avgWaterLevelM: 0,
+        peakWaterLevelM: 0,
+        rainfallAnomalyPct: 0,
+        image: "",
+        summary: "Data Coming Soon",
+    }
 ];

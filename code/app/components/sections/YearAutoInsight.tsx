@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { RIVER_YEARS } from "../../data/riverYears";
+import { RIVER_YEARS } from "../../data/riverInsight";
 
 interface YearAutoInsightProps {
     autoAdvanceMs?: number;
@@ -24,7 +24,8 @@ export function YearAutoInsight({ autoAdvanceMs = 4000 }: YearAutoInsightProps) 
                 <div className="flex-1 flex items-center justify-center">
                     <div className="w-full aspect-video rounded-xl bg-gray-300 dark:bg-gray-700 flex items-center justify-center text-gray-700 dark:text-gray-300 text-sm md:text-base">
                         {/* Replace with <img src={current.image} alt=... /> once assets available */}
-                        {current.year} Detail Image Placeholder
+                        {/* {current.year} Detail Image Placeholder */}
+                        <img src={current.image} />
                     </div>
                 </div>
                 <div className="flex-1 flex flex-col gap-4">

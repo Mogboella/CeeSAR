@@ -12,7 +12,7 @@ export function MapTimeline({ autoAdvanceMs = 3500, pauseOnHover = true }: MapTi
     const years = RIVER_YEARS;
     const containerRef = useRef<HTMLDivElement | null>(null);
 
-    // Auto-advance
+    // ==== AUTO-ADVANCE LOGIC ====
     useEffect(() => {
         if (isPaused) return;
         const id = setTimeout(() => {
@@ -26,7 +26,7 @@ export function MapTimeline({ autoAdvanceMs = 3500, pauseOnHover = true }: MapTi
             id="map-timeline"
             className="snap-section px-6 bg-white dark:bg-gray-950 flex flex-col"
         >
-            <div className="max-w-6xl mx-auto w-full flex flex-col h-full">
+            <div className="max-w-6xl mx-auto w-full flex flex-col h-full pt-40">
                 <header className="mb-6 text-center">
                     <h2 className="text-3xl md:text-4xl font-semibold tracking-tight mb-2">
                         Decadal Flood Extent Timeline
@@ -41,13 +41,26 @@ export function MapTimeline({ autoAdvanceMs = 3500, pauseOnHover = true }: MapTi
                     onMouseEnter={() => pauseOnHover && setIsPaused(true)}
                     onMouseLeave={() => pauseOnHover && setIsPaused(false)}
                 >
-                    {/* Image / map region */}
-                    <div className="relative flex-1 min-h-[300px] flex items-center justify-center bg-black/5 dark:bg-black/40">
+                    {/* ==== GALLERY ==== */}
+                    <div className="relative flex-1 min-h-[600px] flex items-center justify-center ">
                         <div className="absolute inset-0 flex items-center justify-center">
                             <div className="h-full w-full flex items-center justify-center p-4">
-                                <div className="w-full h-full rounded-lg bg-gray-300 dark:bg-gray-700 flex items-center justify-center text-gray-700 dark:text-gray-300 text-sm md:text-base">
-                                    {/* Placeholder; replace with <img /> or map canvas */}
-                                    Year {years[index].year} Map Placeholder
+                                <div className="w-full h-full rounded-lg shadow-lg ">
+                                    {years[index].image ? (
+                                        <video
+                                            className="w-full h-full object-cover rounded-lg"
+                                            autoPlay
+                                            loop
+                                            muted
+                                            playsInline
+                                        >
+                                            <source src={years[index].image} type="video/mp4" />
+                                        </video>
+                                    ) : (
+                                        <div className="w-full h-full flex items-center justify-center rounded-lg bg-gray-200 dark:bg-gray-800 text-gray-600 dark:text-gray-300 text-lg font-semibold">
+                                            Data Coming Soon
+                                        </div>
+                                    )}
                                 </div>
                             </div>
                         </div>
@@ -64,8 +77,8 @@ export function MapTimeline({ autoAdvanceMs = 3500, pauseOnHover = true }: MapTi
                                         key={y.year}
                                         onClick={() => setIndex(i)}
                                         className={`w-full text-left px-3 py-2 rounded-md transition flex items-center justify-between ${active
-                                                ? "bg-sky-600 text-white shadow"
-                                                : "hover:bg-gray-100 dark:hover:bg-gray-800 text-gray-700 dark:text-gray-300"
+                                            ? "bg-sky-600 text-white shadow"
+                                            : "hover:bg-gray-100 dark:hover:bg-gray-800 text-gray-700 dark:text-gray-300"
                                             }`}
                                     >
                                         <span>{y.year}</span>
@@ -76,20 +89,24 @@ export function MapTimeline({ autoAdvanceMs = 3500, pauseOnHover = true }: MapTi
                                 );
                             })}
                         </div>
-                        <div className="p-3 border-t border-gray-200 dark:border-gray-800 flex items-center justify-between text-xs text-gray-600 dark:text-gray-400">
-                            <span>{isPaused ? "Paused" : "Playing"}</span>
-                            <button
-                                onClick={() => setIsPaused((p) => !p)}
-                                className="px-2 py-1 rounded bg-sky-600 text-white hover:bg-sky-700"
-                            >
-                                {isPaused ? "Resume" : "Pause"}
-                            </button>
-                        </div>
                     </div>
                 </div>
                 <p className="mt-4 text-xs text-gray-500 dark:text-gray-500 text-center">
                     Data illustrative; integrate SAR composite tiles or dynamic map for production.
                 </p>
+            </div>
+            <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
+                <span className="flex justify-center w-full">
+                    <svg
+                        className="animate-bounce h-16 w-16 text-sky-600 dark:text-sky-300"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth={2}
+                        viewBox="0 0 24 24"
+                    >
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+                    </svg>
+                </span>
             </div>
         </section>
     );

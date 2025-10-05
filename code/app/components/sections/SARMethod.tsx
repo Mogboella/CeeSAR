@@ -34,7 +34,7 @@ export function SARMethod() {
                         body="Flood extent polygons + hydrodynamic indices feed trend analytics and risk scoring." />
                 </div>
                 <p className="text-xs text-gray-500">
-                    Toolchain: Sentinel-1 IW GRD → ESA SNAP pre-processing → Python (rasterio, xarray) → Model inference → Vectorization.
+                    Workflow: Sentinel-1 SAR imagery processed in Google Earth Engine and refined in QGIS to analyze backscatter, map flood extents, and trace floodplain dynamics.
                 </p>
             </div>
         </section>
