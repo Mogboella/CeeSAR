@@ -12,14 +12,19 @@ export function MapTimeline({ autoAdvanceMs = 3500, pauseOnHover = true }: MapTi
     const years = RIVER_YEARS;
     const containerRef = useRef<HTMLDivElement | null>(null);
 
+    const [showPopup, setShowPopup] = useState(false);
+    const [zoom, setZoom] = useState(1);
+
     // ==== AUTO-ADVANCE LOGIC ====
     useEffect(() => {
-        if (isPaused) return;
+        if (isPaused || showPopup) return;
         const id = setTimeout(() => {
             setIndex((i) => (i + 1) % years.length);
         }, autoAdvanceMs);
         return () => clearTimeout(id);
-    }, [index, years.length, autoAdvanceMs, isPaused]);
+    }, [index, years.length, autoAdvanceMs, isPaused, showPopup]);
+
+    const videoKey = `${years[index].image}-${years[index].year}-${index}`;
 
     return (
         <section
@@ -48,11 +53,13 @@ export function MapTimeline({ autoAdvanceMs = 3500, pauseOnHover = true }: MapTi
                                 <div className="w-full h-full rounded-lg shadow-lg ">
                                     {years[index].image ? (
                                         <video
-                                            className="w-full h-full object-cover rounded-lg"
+                                            key={videoKey}
+                                            className="w-full h-full object-cover rounded-lg cursor-pointer"
                                             autoPlay
                                             loop
                                             muted
                                             playsInline
+                                            onClick={() => setShowPopup(true)}
                                         >
                                             <source src={years[index].image} type="video/mp4" />
                                         </video>
@@ -65,9 +72,47 @@ export function MapTimeline({ autoAdvanceMs = 3500, pauseOnHover = true }: MapTi
                             </div>
                         </div>
                         <YearBadge year={years[index].year} />
+                        {/* ==== ZOOM WINDOW ==== */}
+                        {showPopup && (
+                            <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-70">
+                                <div
+                                    className="absolute inset-0"
+                                    onClick={() => setShowPopup(false)}
+                                />
+                                <div className="relative bg-white dark:bg-gray-900 rounded-lg shadow-xl p-6 max-w-5xl w-full flex flex-col items-center">
+                                    <button
+                                        className="absolute top-2 right-2 text-gray-700 dark:text-gray-300 text-2xl font-bold"
+                                        onClick={() => setShowPopup(false)}
+                                        aria-label="Close"
+                                    >
+                                        &times;
+                                    </button>
+                                    <div
+                                        className="overflow-auto max-h-[90vh] flex items-center justify-center"
+                                        style={{ cursor: "zoom-in" }}
+                                    >
+                                        <img
+                                            src={years[index].zoomImage || years[index].image}
+                                            alt={`Flood extent ${years[index].year}`}
+                                            className="max-w-full max-h-[85vh] rounded-lg"
+                                            style={{ transition: "transform 0.2s", transform: `scale(${zoom})` }}
+                                            onWheel={e => {
+                                                e.preventDefault();
+                                                setZoom(z => Math.max(1, Math.min(4, z + (e.deltaY < 0 ? 0.2 : -0.2))));
+                                            }}
+                                        />
+                                    </div>
+                                    <div className="mt-2 text-center text-sm text-gray-600 dark:text-gray-300">
+                                        {years[index].summary}
+                                    </div>
+                                    <div className="mt-2 text-center text-xs text-gray-500 dark:text-gray-400">
+                                        Scroll to zoom. Click outside to close.
+                                    </div>
+                                </div>
+                            </div>
+                        )}
                     </div>
-
-                    {/* Mini year scrub bar */}
+                    {/* ==== MINI YEAR SCRUB BAR ==== */}
                     <div className="md:w-64 w-full md:border-l border-t md:border-t-0 border-gray-200 dark:border-gray-800 flex flex-col">
                         <div className="flex-1 overflow-y-auto px-3 py-4 space-y-1 text-sm custom-scrollbar">
                             {years.map((y, i) => {
@@ -92,7 +137,8 @@ export function MapTimeline({ autoAdvanceMs = 3500, pauseOnHover = true }: MapTi
                     </div>
                 </div>
                 <p className="mt-4 text-xs text-gray-500 dark:text-gray-500 text-center">
-                    Data illustrative; integrate SAR composite tiles or dynamic map for production.
+                    SAR Data Source: Copernicus Sentinel-1, processed by ESA. Flood extent derived from
+                    backscatter thresholds.
                 </p>
             </div>
             <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">

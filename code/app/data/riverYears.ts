@@ -5,6 +5,7 @@ export interface RiverYearData {
     peakWaterLevelM: number;
     rainfallAnomalyPct: number;
     image: string;
+    zoomImage: string;
     summary: string;
 }
 
@@ -17,6 +18,7 @@ export const RIVER_YEARS: RiverYearData[] = [
         rainfallAnomalyPct: 20,
         image: "https://res.cloudinary.com/dgdsc8fxf/video/upload/v1759613171/SAR_2015_dm0qjs.mp4",
         summary: "Severe flooding event; extensive farmland and infrastructure impacts.",
+        zoomImage: "https://res.cloudinary.com/dgdsc8fxf/image/upload/v1759600886/maps/Period_1_2015_01_map.png"
     },
     {
         year: 2016,
@@ -24,8 +26,9 @@ export const RIVER_YEARS: RiverYearData[] = [
         avgWaterLevelM: 2.1,
         peakWaterLevelM: 3.4,
         rainfallAnomalyPct: 8,
-        image: "/public/maps/2016_lowres.png",
+        image: "https://res.cloudinary.com/dgdsc8fxf/video/upload/v1759613170/SAR_2016_loxgdr.mp4",
         summary: "Mild winter flooding; localized farmland impacts near Shannon Callows.",
+        zoomImage: "https://res.cloudinary.com/dgdsc8fxf/image/upload/v1759601998/maps/Period_12_2016_06_map.png"
     },
     {
         year: 2017,
@@ -33,8 +36,9 @@ export const RIVER_YEARS: RiverYearData[] = [
         avgWaterLevelM: 2.3,
         peakWaterLevelM: 3.9,
         rainfallAnomalyPct: 15,
-        image: "/images/river/2017.jpg",
+        image: "https://res.cloudinary.com/dgdsc8fxf/video/upload/v1759613169/SAR_2017_oigswn.mp4",
         summary: "Prolonged rainfall created extended saturation; moderate navigation delays.",
+        zoomImage: "https://res.cloudinary.com/dgdsc8fxf/image/upload/v1759602088/maps/Period_9_2017_05_map.png"
     },
     {
         year: 2018,
@@ -42,8 +46,9 @@ export const RIVER_YEARS: RiverYearData[] = [
         avgWaterLevelM: 1.9,
         peakWaterLevelM: 2.8,
         rainfallAnomalyPct: -12,
-        image: "/images/river/2018.jpg",
+        image: "https://res.cloudinary.com/dgdsc8fxf/video/upload/v1759613169/SAR_2018_ey5x1i.mp4",
         summary: "Drier conditions; reduced floodplain coverage and lower sediment transport.",
+        zoomImage: ""
     },
     {
         year: 2019,
@@ -51,8 +56,9 @@ export const RIVER_YEARS: RiverYearData[] = [
         avgWaterLevelM: 2.2,
         peakWaterLevelM: 3.2,
         rainfallAnomalyPct: 5,
-        image: "/images/river/2019.jpg",
+        image: "https://res.cloudinary.com/dgdsc8fxf/video/upload/v1759613170/SAR_2019_pllxw6.mp4",
         summary: "Near-average hydrological behavior with early spring crest.",
+        zoomImage: ""
     },
     {
         year: 2020,
@@ -60,8 +66,9 @@ export const RIVER_YEARS: RiverYearData[] = [
         avgWaterLevelM: 2.5,
         peakWaterLevelM: 4.1,
         rainfallAnomalyPct: 21,
-        image: "/images/river/2020.jpg",
+        image: "https://res.cloudinary.com/dgdsc8fxf/video/upload/v1759613171/SAR_2020_tp0gj3.mp4",
         summary: "Significant winter floods; access disruptions and higher erosion hotspots.",
+        zoomImage: ""
     },
     {
         year: 2021,
@@ -71,6 +78,7 @@ export const RIVER_YEARS: RiverYearData[] = [
         rainfallAnomalyPct: 0,
         image: "",
         summary: "Data Coming Soon",
+        zoomImage: ""
     },
     {
         year: 2022,
@@ -80,6 +88,7 @@ export const RIVER_YEARS: RiverYearData[] = [
         rainfallAnomalyPct: 0,
         image: "",
         summary: "Data Coming Soon",
+        zoomImage: ""
     },
     {
         year: 2023,
@@ -89,6 +98,7 @@ export const RIVER_YEARS: RiverYearData[] = [
         rainfallAnomalyPct: 0,
         image: "",
         summary: "Data Coming Soon",
+        zoomImage: ""
     },
     {
         year: 2024,
@@ -98,5 +108,6 @@ export const RIVER_YEARS: RiverYearData[] = [
         rainfallAnomalyPct: 0,
         image: "",
         summary: "Data Coming Soon",
+        zoomImage: ""
     }
 ];
