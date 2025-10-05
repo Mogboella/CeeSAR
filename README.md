@@ -2,7 +2,7 @@
 
 ### *The Shannon Pulse: Forecasting Floodplain Dynamics with SAR*
 
-[**Live Demo**](https://ceasarfloodcontrol.netlify.app) | [Presentation Slides](#)
+[**Live Demo**](https://ceasarfloodcontrol.netlify.app) | [Presentation Slides](https://docs.google.com/presentation/d/1yc8pFzAivYxlUsOYMUbvK6XfVoTsXIdRhMRub2ackd0/edit?usp=sharing)
 
 ![NASA Space Apps](https://img.shields.io/badge/NASA-Space%20Apps%202025-blue)
 ![Challenge](https://img.shields.io/badge/Challenge-Radar%20Looking%20Glass-orange)
@@ -158,7 +158,7 @@ This project meets the challenge objectives by:
 **License:** MIT
 
 * **Live Demo:** [ceasarfloodcontrol.netlify.app](https://ceasarfloodcontrol.netlify.app)
-* **Slides:** [Link to presentation](https://docs.google.com/presentation/d/14d9Ots0QDqjlhvr0dT1BmZhV0mvd5bDI/edit?usp=drive_link&ouid=105400134222966212498&rtpof=true&sd=true)
+* **Slides:** [[Link to presentation](https://docs.google.com/presentation/d/1yc8pFzAivYxlUsOYMUbvK6XfVoTsXIdRhMRub2ackd0/edit?usp=sharing)](https://docs.google.com/presentation/d/1yc8pFzAivYxlUsOYMUbvK6XfVoTsXIdRhMRub2ackd0/edit?usp=sharing)
 * **NASA Challenge:** [Through the Radar Looking Glass](https://www.spaceappschallenge.org/)
 
 ---
