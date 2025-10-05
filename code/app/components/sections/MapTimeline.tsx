@@ -46,15 +46,21 @@ export function MapTimeline({ autoAdvanceMs = 3500, pauseOnHover = true }: MapTi
                         <div className="absolute inset-0 flex items-center justify-center">
                             <div className="h-full w-full flex items-center justify-center p-4">
                                 <div className="w-full h-full rounded-lg shadow-lg ">
-                                    <video
-                                        className="w-full h-full object-cover rounded-lg"
-                                        autoPlay
-                                        loop
-                                        muted
-                                        playsInline
+                                    {years[index].image ? (
+                                        <video
+                                            className="w-full h-full object-cover rounded-lg"
+                                            autoPlay
+                                            loop
+                                            muted
+                                            playsInline
                                         >
-                                        <source src={years[index].image} type="video/mp4" />
-                                    </video>
+                                            <source src={years[index].image} type="video/mp4" />
+                                        </video>
+                                    ) : (
+                                        <div className="w-full h-full flex items-center justify-center rounded-lg bg-gray-200 dark:bg-gray-800 text-gray-600 dark:text-gray-300 text-lg font-semibold">
+                                            Data Coming Soon
+                                        </div>
+                                    )}
                                 </div>
                             </div>
                         </div>
@@ -71,8 +77,8 @@ export function MapTimeline({ autoAdvanceMs = 3500, pauseOnHover = true }: MapTi
                                         key={y.year}
                                         onClick={() => setIndex(i)}
                                         className={`w-full text-left px-3 py-2 rounded-md transition flex items-center justify-between ${active
-                                                ? "bg-sky-600 text-white shadow"
-                                                : "hover:bg-gray-100 dark:hover:bg-gray-800 text-gray-700 dark:text-gray-300"
+                                            ? "bg-sky-600 text-white shadow"
+                                            : "hover:bg-gray-100 dark:hover:bg-gray-800 text-gray-700 dark:text-gray-300"
                                             }`}
                                     >
                                         <span>{y.year}</span>
@@ -90,18 +96,18 @@ export function MapTimeline({ autoAdvanceMs = 3500, pauseOnHover = true }: MapTi
                 </p>
             </div>
             <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
-                    <span className="flex justify-center w-full">
-                        <svg
-                            className="animate-bounce h-16 w-16 text-sky-600 dark:text-sky-300"
-                            fill="none"
-                            stroke="currentColor"
-                            strokeWidth={2}
-                            viewBox="0 0 24 24"
-                        >
-                            <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
-                        </svg>
-                    </span>
-                </div>
+                <span className="flex justify-center w-full">
+                    <svg
+                        className="animate-bounce h-16 w-16 text-sky-600 dark:text-sky-300"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth={2}
+                        viewBox="0 0 24 24"
+                    >
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+                    </svg>
+                </span>
+            </div>
         </section>
     );
 }
