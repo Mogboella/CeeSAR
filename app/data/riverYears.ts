@@ -4,7 +4,7 @@ export interface RiverYearData {
     avgWaterLevelM: number;
     peakWaterLevelM: number;
     rainfallAnomalyPct: number;
-    link: string;
+    image: string;
     summary: string;
 }
 
@@ -15,7 +15,7 @@ export const RIVER_YEARS: RiverYearData[] = [
         avgWaterLevelM: 2.4,
         peakWaterLevelM: 4.0,
         rainfallAnomalyPct: 20,
-        link: "https://res.cloudinary.com/dgdsc8fxf/video/upload/v1759613171/SAR_2015_dm0qjs.mp4",
+        image: "/public/maps/2015_lowres.png",
         summary: "Severe flooding event; extensive farmland and infrastructure impacts.",
     },
     {
@@ -24,7 +24,7 @@ export const RIVER_YEARS: RiverYearData[] = [
         avgWaterLevelM: 2.1,
         peakWaterLevelM: 3.4,
         rainfallAnomalyPct: 8,
-        link: "https://res.cloudinary.com/dgdsc8fxf/video/upload/v1759613170/SAR_2016_loxgdr.mp4",
+        image: "/public/maps/2016_lowres.png",
         summary: "Mild winter flooding; localized farmland impacts near Shannon Callows.",
     },
     {
@@ -33,7 +33,7 @@ export const RIVER_YEARS: RiverYearData[] = [
         avgWaterLevelM: 2.3,
         peakWaterLevelM: 3.9,
         rainfallAnomalyPct: 15,
-        link: "/link/river/2017.jpg",
+        image: "/images/river/2017.jpg",
         summary: "Prolonged rainfall created extended saturation; moderate navigation delays.",
     },
     {
@@ -42,7 +42,7 @@ export const RIVER_YEARS: RiverYearData[] = [
         avgWaterLevelM: 1.9,
         peakWaterLevelM: 2.8,
         rainfallAnomalyPct: -12,
-        link: "/link/river/2018.jpg",
+        image: "/images/river/2018.jpg",
         summary: "Drier conditions; reduced floodplain coverage and lower sediment transport.",
     },
     {
@@ -51,7 +51,7 @@ export const RIVER_YEARS: RiverYearData[] = [
         avgWaterLevelM: 2.2,
         peakWaterLevelM: 3.2,
         rainfallAnomalyPct: 5,
-        link: "/link/river/2019.jpg",
+        image: "/images/river/2019.jpg",
         summary: "Near-average hydrological behavior with early spring crest.",
     },
     {
@@ -60,7 +60,7 @@ export const RIVER_YEARS: RiverYearData[] = [
         avgWaterLevelM: 2.5,
         peakWaterLevelM: 4.1,
         rainfallAnomalyPct: 21,
-        link: "/link/river/2020.jpg",
+        image: "/images/river/2020.jpg",
         summary: "Significant winter floods; access disruptions and higher erosion hotspots.",
     },
     {
@@ -69,7 +69,7 @@ export const RIVER_YEARS: RiverYearData[] = [
         avgWaterLevelM: 2.2,
         peakWaterLevelM: 3.5,
         rainfallAnomalyPct: 9,
-        link: "/link/river/2021.jpg",
+        image: "/images/river/2021.jpg",
         summary: "Moderate seasonal inundation; riparian restoration zones effective.",
     },
     {
@@ -78,7 +78,7 @@ export const RIVER_YEARS: RiverYearData[] = [
         avgWaterLevelM: 2.0,
         peakWaterLevelM: 3.1,
         rainfallAnomalyPct: -4,
-        link: "/link/river/2022.jpg",
+        image: "/images/river/2022.jpg",
         summary: "Slightly below average extent; improved early warning accuracy.",
     },
     {
@@ -87,7 +87,7 @@ export const RIVER_YEARS: RiverYearData[] = [
         avgWaterLevelM: 2.4,
         peakWaterLevelM: 3.8,
         rainfallAnomalyPct: 13,
-        link: "/link/river/2023.jpg",
+        image: "/images/river/2023.jpg",
         summary: "Elevated late autumn discharge; higher turbidity in lower reaches.",
     },
     {
@@ -96,7 +96,7 @@ export const RIVER_YEARS: RiverYearData[] = [
         avgWaterLevelM: 2.6,
         peakWaterLevelM: 4.3,
         rainfallAnomalyPct: 25,
-        link: "/link/river/2024.jpg",
+        image: "/images/river/2024.jpg",
         summary: "Notable peak overtopping minor embankments; infrastructure stress tests triggered.",
     },
     {
@@ -105,7 +105,7 @@ export const RIVER_YEARS: RiverYearData[] = [
         avgWaterLevelM: 2.5,
         peakWaterLevelM: 4.0,
         rainfallAnomalyPct: 18,
-        link: "/link/river/2025.jpg",
+        image: "/images/river/2025.jpg",
         summary: "Sustained high stages; model recalibration improved inundation mapping latency.",
     },
 ];
