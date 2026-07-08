@@ -137,7 +137,7 @@ This project meets the challenge objectives by:
 **Team Members:**
 - Adetunji Ayoade Joseph – Project Lead / SAR Data Analysis 
 - Emmanuella Nkem Mogbo – Frontend Development & DevOps  
-- Miriam Mohammed – Backend Development / Data Analysis  
+- [Miriam Mohammed](https://github.com/Miriam-Codes) – Backend Development / Data Analysis  
 - Oleh Dorofieiev – Frontend Development & Visualization  
 - Nandini Sharma – Backend Development / Data Analysis    
 - Ebube Ebokosia – UX / Presentation & Storytelling
